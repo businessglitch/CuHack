@@ -12,13 +12,13 @@ const concertsList: Concert[] = [
  ]   
 
 const ticketsList: Ticket[] = [
-    {image:"assets/img/tide.png",title: "First Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[0]},
-    {image:"assets/img/tide.png",title: "Second Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1]},
-    {image:"assets/img/tide.png",title: "Third Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1]},
-    {image:"assets/img/tide.png",title: "Fourth Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 3, concert: concertsList[2]},
-    {image:"assets/img/tide.png",title: "Fifth Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[4]},
-    {image:"assets/img/tide.png",title: "Sixth Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId : 2, concert: concertsList[3]},
-    {image:"assets/img/tide.png",title: "Seventh Ticket",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline',sellerId: 4, concert: concertsList[0]}
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[0], Id: 1},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 2},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 3},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 3, concert: concertsList[2], Id: 4},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[4], Id: 5},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId : 2, concert: concertsList[3], Id: 6},
+    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline',sellerId: 4, concert: concertsList[0], Id: 7}
     
  ]   
 
