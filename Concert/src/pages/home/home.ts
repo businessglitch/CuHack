@@ -18,13 +18,16 @@ export class HomePage {
 
 	constructor(public navCtrl: NavController, public http: Http) {
 		console.log(this.ticketsList);
+	}	
+
+	callTicketDetail(ticket) {
+		this.navCtrl.push('TicketDetailPage',ticket);
 	}
 
-	addToFavourites(ticket) {
-
+	buyTicket() {
 		this.http.post('http://172.17.76.82:3000/payments', {
 			amount: 1,
-			reference: 'r6',
+			reference: 'r7',
 			description: 'd'
 		})
 		.toPromise()
@@ -33,4 +36,22 @@ export class HomePage {
 		});
 	}
 
+	addToFavourites(ticket) {
+
+		if(!ticket.favourite) { 
+      		ticket.favItemClass = 'heart' 
+	      	ticket.favourite = true;
+	      	//let bool = this.data.saveCoupon(this.authenticatedUser,item);
+	      	// if(bool) {
+	      	//   console.log("Coupon has been added to Favourites!");
+	      	// } 
+    	} else {
+	      	ticket.favItemClass = 'heart-outline';
+	      	ticket.favourite = false;
+	      	//let bool = this.data.removeCoupon(this.authenticatedUser,item);
+	      	// if(bool){
+	       //  	console.log("Successfully removed the Coupon");
+	      	// }
+    	}
+	}
 }

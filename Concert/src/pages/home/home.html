@@ -1,30 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>HOME</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
     <ion-card class="ticket" *ngFor="let ticket of ticketsList">
-      <div class="ticketCard">
-        <div class="ticketDetail">
-          <ion-item>
-            <h2>Ticket price</h2>
-            <p>${{ticket.price}}</p>
-          </ion-item>
-          <ion-item>
-            <h2>{{ticket.concert.title}}</h2>
-            <p>{{ticket.description}}</p>
-            <p>{{ticket.concert.address}}</p>
-          </ion-item>
-        </div>
+      <ion-card-content class="ticketCard" (click)="callTicketDetail(ticket)">
+        <img [src]=ticket.image/>
+        <ion-card-title>
+         {{ticket.concert.title}}
+        </ion-card-title>
         <ion-item>
-          <button (click)="addToFavourites(ticket)" ion-button icon-only clear item-right>
+            <h2 class="ticket-section-heading">Ticket price</h2>
+            <p>${{ticket.price}}</p>
+        </ion-item>
+        <p>{{ticket.description}}</p>
+        <p>{{ticket.concert.address}}</p>
+        <ion-item>
+          <button (click)="buyTicket(ticket)" ion-button icon-only clear item-right>
+            <ion-icon name="md-pricetag"></ion-icon>
+          </button>
+          <button (click)="addToFavourites(ticket)" ion-button icon-only clear  item-right>
             <ion-icon [name]="ticket.favItemClass"></ion-icon>
           </button>
         </ion-item>
-      </div>
+      </ion-card-content>
     </ion-card>
   </ion-list>
 </ion-content>
