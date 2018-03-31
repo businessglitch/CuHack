@@ -12,13 +12,13 @@ const concertsList: Concert[] = [
  ]   
 
 const ticketsList: Ticket[] = [
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[0], Id: 1},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 2},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 3},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 3, concert: concertsList[2], Id: 4},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[4], Id: 5},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId : 2, concert: concertsList[3], Id: 6},
-    {image:"assets/img/tide.png",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline',sellerId: 4, concert: concertsList[0], Id: 7}
+    {image:"assets/imgs/jayz.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[0], Id: 1},
+    {image:"assets/imgs/bluesfest.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 2},
+    {image:"assets/imgs/bluesfest.jpg",description: "The Sample Data goes Here",price: 10.00,favourite:false,favItemClass: 'heart-outline', sellerId: 2, concert: concertsList[1], Id: 3},
+    {image:"assets/imgs/drake.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 3, concert: concertsList[2], Id: 4},
+    {image:"assets/imgs/selena.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId: 1, concert: concertsList[4], Id: 5},
+    {image:"assets/imgs/justin.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline', sellerId : 2, concert: concertsList[3], Id: 6},
+    {image:"assets/imgs/jayz.jpg",description: "The Sample Data goes Here",price: 13.00,favourite:false,favItemClass: 'heart-outline',sellerId: 4, concert: concertsList[0], Id: 7}
     
  ]   
 
