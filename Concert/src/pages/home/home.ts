@@ -19,4 +19,31 @@ export class HomePage {
 		console.log(this.ticketsList);
 	}
 
+	callTicketDetail(ticket) {
+		this.navCtrl.push('TicketDetailPage',ticket);
+	}
+
+	buyTicket() {
+
+	}
+
+	addToFavourites(ticket) {
+
+		if(!ticket.favourite) { 
+      		ticket.favItemClass = 'heart' 
+	      	ticket.favourite = true;
+	      	//let bool = this.data.saveCoupon(this.authenticatedUser,item);
+	      	// if(bool) {
+	      	//   console.log("Coupon has been added to Favourites!");
+	      	// } 
+    	} else {
+	      	ticket.favItemClass = 'heart-outline';
+	      	ticket.favourite = false;
+	      	//let bool = this.data.removeCoupon(this.authenticatedUser,item);
+	      	// if(bool){
+	       //  	console.log("Successfully removed the Coupon");
+	      	// }
+    	}
+	}
+
 }
