@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {AngularFireAuth} from 'angularfire2/auth';
+//import {AngularFireAuth} from 'angularfire2/auth';
 /*
   Generated class for the AuthProvider provider.
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
@@ -8,7 +8,7 @@ import {AngularFireAuth} from 'angularfire2/auth';
 @Injectable()
 export class AuthService {
 
-  constructor(private auth: AngularFireAuth) {
+  constructor() {
     console.log('Hello AuthProvider Provider');
   }
 }
