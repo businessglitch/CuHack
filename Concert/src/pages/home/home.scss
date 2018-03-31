@@ -1,3 +1,22 @@
-page-home {
+.ticket {
+    padding: 10px 10px 10px 10px;   
+}
+.ticketCard{
+    border-style: dashed;
+    border-color: #8a8c91;
+    border-width: 2px;
 
+}
+.ticketDetail{
+	width:100%;
+	word-wrap: break-word;
+    float: right;
+}
+.ticketImage{
+    margin-top: 20px;
+    width:50%;
+    float: left;
+}
+.profile-icon{
+    font-size: 25px;
 }
