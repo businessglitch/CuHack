@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>HOME</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
   <ion-list>
     <ion-card class="ticket" *ngFor="let ticket of ticketsList">
       <div class="ticketCard">
-        <div class="ticketDetail">
+        <div class="ticketDetail" (click)="callTicketDetail(ticket)">
           <ion-item>
             <h2>Ticket price</h2>
             <p>${{ticket.price}}</p>
@@ -20,6 +20,9 @@
           </ion-item>
         </div>
         <ion-item>
+        <button (click)="buyTicket(ticket)" ion-button icon-only clear item-right>
+            <ion-icon name="md-pricetag"></ion-icon>
+          </button>
           <button (click)="addToFavourites(ticket)" ion-button icon-only clear item-right>
             <ion-icon [name]="ticket.favItemClass"></ion-icon>
           </button>
