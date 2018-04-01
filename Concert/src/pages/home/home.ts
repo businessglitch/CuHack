@@ -25,11 +25,14 @@ export class HomePage {
 	}
 
 	buyTicket(ticket) {
+		//const api = 'http://192.168.2.21:3000/payments';
+		const api = 'http://changejar-tunabutter1.c9users.io/payments';
+
 		const amount = ticket.price * 100;
 		const reference = ticket.Id.toString() + ticket.sellerId.toString();
 		const description = ticket.description;
 
-		this.http.post('http://192.168.2.21:3000/payments', {
+		this.http.post(api, {
 			amount: amount,
 			reference: reference,
 			description: description
