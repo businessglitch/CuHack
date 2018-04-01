@@ -24,15 +24,29 @@ export class HomePage {
 		this.navCtrl.push('TicketDetailPage',ticket);
 	}
 
-	buyTicket() {
-		this.http.post('http://172.17.76.82:3000/payments', {
-			amount: 1,
-			reference: 'r7',
-			description: 'd'
+	buyTicket(ticket) {
+		const amount = ticket.price * 100;
+		const reference = ticket.Id.toString() + ticket.sellerId.toString();
+		const description = ticket.description;
+
+		this.http.post('http://192.168.2.21:3000/payments', {
+			amount: amount,
+			reference: reference,
+			description: description
 		})
 		.toPromise()
 		.then(data => {
-			console.log(data.text());
+			const response = JSON.parse(data.text());
+			const appUrl = response.appUrl;
+			const messengerUrl = response.messengerUrl;
+
+			console.log(appUrl);
+			console.log(messengerUrl);
+
+			// TODO: open appUrl or messengerUrl
+		})
+		.catch(error => {
+			console.log(error.status);
 		});
 	}
 
