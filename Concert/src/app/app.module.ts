@@ -20,9 +20,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AuthService } from '../providers/auth/auth.service';
 import { DataService } from '../providers/data/data.service';
 import { FormsModule } from '@angular/forms';
-
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera'
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -35,10 +35,11 @@ import { Camera } from '@ionic-native/camera'
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FormsModule
+    FormsModule,
     // AngularFireModule.initializeApp(FIREBASE_CONFIG),
     // AngularFireDatabaseModule,
     // AngularFireAuthModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

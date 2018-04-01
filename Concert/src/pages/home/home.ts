@@ -6,6 +6,7 @@ import { DataService } from "../../providers/data/data.service";
 import { AuthService } from '../../providers/auth/auth.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Events } from 'ionic-angular';
+import { Http, Response, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'page-home',
@@ -15,16 +16,41 @@ export class HomePage {
 	ticketsList:Ticket[] = TICKETS_LIST;
 	favItemClass:string = 'heart-outline';
 
-	constructor(public navCtrl: NavController) {
+	constructor(public navCtrl: NavController, public http: Http) {
 		console.log(this.ticketsList);
-	}
+	}	
 
 	callTicketDetail(ticket) {
 		this.navCtrl.push('TicketDetailPage',ticket);
 	}
 
-	buyTicket() {
+	buyTicket(ticket) {
+		//const api = 'http://192.168.2.21:3000/payments';
+		const api = 'http://changejar-tunabutter1.c9users.io/payments';
 
+		const amount = ticket.price * 100;
+		const reference = ticket.Id.toString() + ticket.sellerId.toString();
+		const description = ticket.description;
+
+		this.http.post(api, {
+			amount: amount,
+			reference: reference,
+			description: description
+		})
+		.toPromise()
+		.then(data => {
+			const response = JSON.parse(data.text());
+			const appUrl = response.appUrl;
+			const messengerUrl = response.messengerUrl;
+
+			console.log(appUrl);
+			console.log(messengerUrl);
+
+			// TODO: open appUrl or messengerUrl
+		})
+		.catch(error => {
+			console.log(error.status);
+		});
 	}
 
 	addToFavourites(ticket) {
@@ -45,5 +71,4 @@ export class HomePage {
 	      	// }
     	}
 	}
-
 }
