@@ -6,6 +6,34 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content padding class="page-about">
+   <form (ngSubmit)="logForm()">
+   	<div class="concert-info">
+   		<h2> Concert Info</h2>
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="concert.title" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Address</ion-label>
+        <ion-textarea [(ngModel)]="concert.address" name="address"></ion-textarea>
+      </ion-item>
+       <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-textarea [(ngModel)]="concert.timestamp" name="timestamp"></ion-textarea>
+      </ion-item>
+      </div>
+      <div class="ticket-info">
+      <h2>Ticket Info</h2>
+      <ion-item>
+        <ion-label>Ticket description</ion-label>
+        <ion-input type="text" [(ngModel)]="ticket.description" name="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Price</ion-label>
+        <ion-textarea [(ngModel)]="ticket.price" name="price"></ion-textarea>
+      </ion-item>
+      </div>
+      <button ion-button type="submit" block>Add Ticket</button>
+    </form>
 </ion-content>

@@ -15,5 +15,6 @@ export class ContactPage {
 
 	ionViewWillLoad(){
 		this.account=ACCOUNTS_LIST[0]
+		console.log(this.account);
 	}
 }

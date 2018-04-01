@@ -6,13 +6,34 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="account">
-  <ion-list>
-    <ion-item>Name: {{account.name}}</ion-item>
-    <ion-item>Email: {{account.email}}</ion-item>
-    <ion-item>Address: {{account.address}}</ion-item>
-    <ion-item>Tickets Sold: {{account.sold.length}}</ion-item>
-    <ion-item>Tickets Bought: {{account.bought.length}}</ion-item>
-    <ion-item>Tickets in market: {{account.pending.length}}</ion-item>
+<ion-content class="page-contact">
+  <ion-list padding>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-input type="text" [(ngModel)]="account.address" name="address"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>Tickets Sold</ion-label>
+      <ion-label>{{account.sold.length}}</ion-label>
+    </ion-item>
+     <ion-item>
+      <ion-label>Tickets Bought</ion-label>
+      <ion-label>{{account.bought.length}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tickets in market</ion-label>
+      <ion-label>{{account.pending.length}}</ion-label>
+    </ion-item>
+     <button ion-button type="submit" block>Save</button>
   </ion-list>
+
+ 
 </ion-content>
