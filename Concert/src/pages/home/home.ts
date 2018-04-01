@@ -26,8 +26,8 @@ export class HomePage {
 
 	buyTicket(ticket) {
 		//const api = 'http://192.168.2.21:3000/payments';
-		const api = 'http://changejar-tunabutter1.c9users.io/payments';
-
+		const api = 'http://changejar2-tunabutter1.c9users.io/payments';
+		console.log("Called")
 		const amount = ticket.price * 100;
 		const reference = ticket.Id.toString() + ticket.sellerId.toString();
 		const description = ticket.description;
@@ -42,7 +42,7 @@ export class HomePage {
 			const response = JSON.parse(data.text());
 			const appUrl = response.appUrl;
 			const messengerUrl = response.messengerUrl;
-
+			window.location.href= appUrl;
 			console.log(appUrl);
 			console.log(messengerUrl);
 
