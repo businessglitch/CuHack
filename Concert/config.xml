@@ -81,4 +81,9 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.2.9">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDqoxf_ez-xEJj-yldpxRacPODDXYCCg9c" />
+    </plugin>
+    <plugin name="cordova-plugin-camera" spec="^4.0.2" />
 </widget>

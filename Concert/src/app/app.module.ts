@@ -21,6 +21,9 @@ import { AuthService } from '../providers/auth/auth.service';
 import { DataService } from '../providers/data/data.service';
 import { FormsModule } from '@angular/forms';
 
+import { Geolocation } from '@ionic-native/geolocation';
+import { Camera } from '@ionic-native/camera'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -50,7 +53,9 @@ import { FormsModule } from '@angular/forms';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    DataService
+    DataService,
+    Geolocation,
+    Camera
   ]
 })
 export class AppModule {}
