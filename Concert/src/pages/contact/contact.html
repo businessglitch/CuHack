@@ -1,17 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Profile
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="account">
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-item>Name: {{account.name}}</ion-item>
+    <ion-item>Email: {{account.email}}</ion-item>
+    <ion-item>Address: {{account.address}}</ion-item>
+    <ion-item>Tickets Sold: {{account.sold.length}}</ion-item>
+    <ion-item>Tickets Bought: {{account.bought.length}}</ion-item>
+    <ion-item>Tickets in market: {{account.pending.length}}</ion-item>
   </ion-list>
 </ion-content>
