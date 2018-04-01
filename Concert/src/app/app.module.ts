@@ -22,7 +22,7 @@ import { DataService } from '../providers/data/data.service';
 import { FormsModule } from '@angular/forms';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera'
-import { HttpModule } from '@angular/http';
+import { HttpModule, HttpClientModule } from '@angular/http';
 
 @NgModule({
   declarations: [

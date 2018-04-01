@@ -11,14 +11,20 @@
         <div (click)="callTicketDetail(ticket)">
           <img [src]=ticket.image/>
           <ion-card-title>{{ticket.concert.title}}</ion-card-title>
-          <p>Ticket price: ${{ticket.price}}</p>
-          <p>{{ticket.concert.timestamp}}</p>
+          <p><strong>Ticket price:</strong> ${{ticket.price}}</p>
+          <p><strong>Date: </strong>{{ticket.concert.timestamp}}</p>
         </div>
         <ion-item>
+
           <button (click)="buyTicket(ticket)" ion-button icon-only clear item-right>
             <p>Buy</p> 
             <ion-icon name="md-pricetag"></ion-icon>
           </button>
+          <button ion-button icon-only clear item-right>
+            <p>Share</p> 
+             <ion-icon name="paper-plane"></ion-icon>
+          </button>
+          
           <button (click)="addToFavourites(ticket)" ion-button icon-only clear  item-right>
             <p>Favourites</p>
             <ion-icon [name]="ticket.favItemClass"></ion-icon>

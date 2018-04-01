@@ -16,7 +16,7 @@ import {
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
- */
+ */  
 declare var google;
 @IonicPage()
 @Component({
@@ -28,10 +28,12 @@ export class TicketDetailPage {
 	ticket: Ticket;
 	geoposition: Geoposition;
 	map: any;
+	location: any;
   constructor(
   		private geolocation: Geolocation,
   		private platform: Platform,
    		public navParams: NavParams) {
+
   	console.log(this.navParams.data)
   }
 
@@ -62,7 +64,7 @@ export class TicketDetailPage {
   		this.geolocation.getCurrentPosition().then((position) => {
  
       		let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
- 
+ 			this.location  = latLng;
 		     let mapOptions = {
 		        center: latLng,
 		        zoom: 15,
@@ -70,7 +72,7 @@ export class TicketDetailPage {
 		    }
  
       		this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
- 
+ 			
 		}, (err) => {
 		    console.log(err);
 		});
