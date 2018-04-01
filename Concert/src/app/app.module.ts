@@ -20,7 +20,8 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AuthService } from '../providers/auth/auth.service';
 import { DataService } from '../providers/data/data.service';
 import { FormsModule } from '@angular/forms';
-
+import { Geolocation } from '@ionic-native/geolocation';
+import { Camera } from '@ionic-native/camera'
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -53,7 +54,9 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    DataService
+    DataService,
+    Geolocation,
+    Camera
   ]
 })
 export class AppModule {}
