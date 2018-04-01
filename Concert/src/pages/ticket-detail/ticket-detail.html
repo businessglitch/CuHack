@@ -5,28 +5,17 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>TICKET INFO</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-	<ion-list >
-    <!-- <img [src]=ticket.image> -->
-    <div class="couponCard" >
-      <div class="couponDetail">
-        <ion-item>
-          <h2>SAVE</h2>
-          <p>${{ticket.price}}</p>
-        </ion-item>
-        <ion-item>
-          <h2>{{ticket.title}}</h2>
-          <p>{{ticket.description}}</p>
-        </ion-item>
-      </div>
-    </div>
-  </ion-list>
+<ion-content padding class="ticket-detail-page">
+  <ion-card>
+    <img [src]=ticket.image/>
+    <ion-card-content class="ticket-detail">
+      <ion-card-title> {{ticket.concert.title}} </ion-card-title>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
