@@ -21,6 +21,8 @@ import { AuthService } from '../providers/auth/auth.service';
 import { DataService } from '../providers/data/data.service';
 import { FormsModule } from '@angular/forms';
 
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,10 +34,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FormsModule
+    FormsModule,
     // AngularFireModule.initializeApp(FIREBASE_CONFIG),
     // AngularFireDatabaseModule,
     // AngularFireAuthModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
